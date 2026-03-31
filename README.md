@@ -45,19 +45,6 @@ streamlit run app.py
 
 Then open the local Streamlit URL shown in your terminal.
 
-## Core Methodology
-
-- **Log returns**:
-  - \( r_t = \ln(P_t / P_{t-1}) \)
-- **Historical VaR/CVaR**:
-  - losses defined as \( L = -R \)
-  - VaR is empirical percentile of losses
-  - CVaR is average loss in the tail beyond VaR
-- **Parametric VaR/CVaR** (normal assumption):
-  - horizon scaling with \( \mu_h = h\mu \), \( \sigma_h = \sqrt{h}\sigma \)
-- **Monte Carlo GBM**:
-  - \( S_{t+1} = S_t \exp((\mu - \frac{1}{2}\sigma^2)\Delta t + \sigma\sqrt{\Delta t}\epsilon_t) \)
-
 ## Notes
 
 - Data source is Yahoo Finance via `yfinance`.
